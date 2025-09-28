@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Study Buddy — Evidence</title>
+  <link href="https://fonts.cdnfonts.com/css/mona-sans" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Force this page’s outer background to #f5faf7 -->
+  <div class="page-frame" style="background:#f5faf7;">
+    <header class="site-header" id="top">
+      <a class="brand brand-link" href="index.html">
+        <span class="logo" aria-hidden="true">
+          <img src="/Users/macdev/repos/study-buddy/Pictures/logo.png" alt="Study Buddy Logo">
+        </span>
+        <h1 class="title">Study Buddy</h1>
+      </a>
+
+      <nav id="site-nav" class="site-nav">
+        <ul>
+          <li><a href="what.html">What is Study Buddy</a></li>
+          <li><a href="content.html">Content</a></li>
+          <li><a class="active" href="evidence.html">Evidence</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li class="nav-cta-mobile"><a class="btn btn-download" href="download/study-buddy.zip" download>Download Now</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn-download header-cta" href="download/study-buddy.zip" download>Download Now</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </header>
+
+    <main id="main">
+      <section id="evidence" class="section section-what" aria-labelledby="evidence-title">
+        <div class="section-inner">
+          <h2 id="evidence-title">Why study with a partner?</h2>
+          <p>
+            The right partner shares your pace and personality. You can bounce ideas, challenge weak spots, and keep each other accountable.
+            The result is deeper understanding, faster feedback, and steadier motivation.
+          </p>
+
+          <div class="zigzag" style="margin-top:24px">
+            <!-- 1: image left, text right -->
+            <article class="item">
+              <div class="media">
+                <img src="/Users/macdev/repos/study-buddy/Pictures/study-pair-brainstorm.jpg" alt="Two students brainstorming together with notes and a laptop">
+              </div>
+              <div class="desc">
+                <h3>Shared mindset, clearer goals</h3>
+                <p>Partners with similar study rhythms reduce friction. You align on session length, break timing, and focus style, so attention stays on learning—not logistics.</p>
+              </div>
+            </article>
+
+            <!-- 2: image right, text left -->
+            <article class="item">
+              <div class="media">
+                <img src="/Users/macdev/repos/study-buddy/Pictures/study-group-laptop.jpg" alt="Students discussing concepts while looking at a laptop">
+              </div>
+              <div class="desc">
+                <h3>Bounce ideas to learn faster</h3>
+                <p>Explaining concepts aloud exposes gaps and confirms what sticks. Quick back-and-forth turns confusion into clarity.</p>
+              </div>
+            </article>
+
+            <!-- 3: image left, text right -->
+            <article class="item">
+              <div class="media">
+                <img src="/Users/macdev/repos/study-buddy/Pictures/study-whiteboard.jpg" alt="Students sketching solutions on a whiteboard">
+              </div>
+              <div class="desc">
+                <h3>Accountability that lasts</h3>
+                <p>Scheduling with a partner raises follow-through. You show up, stay on task, and finish work on time because someone else is counting on you.</p>
+              </div>
+            </article>
+
+            <!-- 4: image right, text left -->
+            <article class="item">
+              <div class="media">
+                <img src="/Users/macdev/repos/study-buddy/Pictures/peer-review.jpg" alt="Students reviewing each other’s notes">
+              </div>
+              <div class="desc">
+                <h3>Complementary strengths</h3>
+                <p>Different skill spikes cover blind spots. One person spots algebra slips while the other tightens definitions and proofs.</p>
+              </div>
+            </article>
+          </div>
+
+          <a class="btn section-cta" href="pricing.html">Try Study Buddy</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Study Buddy</p>
+      <a href="#top" class="back-to-top">Back to top</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

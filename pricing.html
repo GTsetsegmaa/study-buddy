@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Study Buddy — What</title>
+  <title>Study Buddy — Pricing</title>
   <link href="https://fonts.cdnfonts.com/css/mona-sans" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -36,20 +36,41 @@
     </header>
 
     <main id="main">
-      <section id="what" class="section section-what" aria-labelledby="what-title">
-        <div class="section-inner two-col">
-          <div class="text-box">
-            <h2 id="what-title"><strong>What is Study Buddy</strong></h2>
-            <p>
-              Study Buddy connects university students to find study partners and learn.
-              Build groups by course or topic, chat, and plan sessions that fit your schedule.
-            </p>
-            <a class="btn section-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSftNY1pBwfq36vzrk6S1Dz4sgo2LVUIi7ZSLXCrLldGzIw7SA/viewform?usp=header">Find Your Next Study Buddy</a>
-          </div>
-          <div class="video-box">
-            <video controls>
-              <source src="Pictures/video.mp4" type="video/mp4" />
-            </video>
+      <section id="pricing" class="section section-pricing" aria-labelledby="pricing-title">
+        <div class="section-inner">
+          <h2 id="pricing-title">Pricing</h2>
+
+          <div class="pricing-row">
+            <!-- Basic -->
+            <article class="plan">
+              <header class="plan-head">
+                <h3 class="plan-name">Basic</h3>
+                <div class="price">
+                  <span class="amount">$3.99</span><span class="unit">/m</span>
+                </div>
+              </header>
+              <ul class="features">
+                <li>Up to 10 chats</li>
+                <li>Group chats included</li>
+              </ul>
+              <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSftNY1pBwfq36vzrk6S1Dz4sgo2LVUIi7ZSLXCrLldGzIw7SA/viewform?usp=header">Get Basic</a>
+            </article>
+
+            <!-- Premium -->
+            <article class="plan primary">
+              <div class="badge" aria-hidden="true">Most popular</div>
+              <header class="plan-head">
+                <h3 class="plan-name">Premium</h3>
+                <div class="price">
+                  <span class="amount">$6.99</span><span class="unit">/m</span>
+                </div>
+              </header>
+              <ul class="features">
+                <li>Unlimited chats</li>
+                <li>Unlimited chat groups</li>
+              </ul>
+              <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSftNY1pBwfq36vzrk6S1Dz4sgo2LVUIi7ZSLXCrLldGzIw7SA/viewform?usp=header">Go Premium</a>
+            </article>
           </div>
         </div>
       </section>
