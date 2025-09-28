@@ -1,0 +1,169 @@
+:root{
+  --accent:#b1c3b7;
+  --fg:#0d1b1e;
+  --muted:#5b6b6b;
+  --brand:#356859;
+  --what:#f5faf7;
+  --content:#eef3ff;
+  --testi:#fff7ee;
+  --radius:18px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:"Mona-Sans","Mona Sans",system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+  color:var(--fg);
+  background:#fff;
+}
+a{color:inherit;text-decoration:none}
+p{line-height:2;margin:0 0 16px}
+h1,h2,h3{margin:0}
+
+/* Frame */
+.page-frame{min-height:100dvh;padding:16px;background:var(--accent)}
+.page-frame > *{background:#fff;border-radius:var(--radius);box-shadow:0 10px 24px rgba(0,0,0,.06)}
+
+/* A11y */
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:16px;top:16px;width:auto;height:auto;padding:8px 12px;background:#000;color:#fff;border-radius:10px;z-index:1000}
+
+/* Header */
+.site-header{
+  position:sticky;top:16px;z-index:500;
+  display:flex;align-items:center;gap:16px;
+  padding:14px 18px;margin-bottom:16px;
+}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-link{color:inherit}
+.brand-link:focus-visible{outline:2px solid var(--brand);outline-offset:4px}
+.logo img{width:28px;height:28px;border-radius:6px}
+.title{font-size:20px}
+
+/* Menu left, CTA right */
+.site-nav{margin-left:24px}
+.site-nav ul{display:flex;gap:16px;list-style:none;margin:0;padding:0}
+.site-nav a{color:var(--fg);padding:10px 12px;border-radius:12px}
+.site-nav a:hover,.site-nav a.active{background:var(--what);color:var(--brand)}
+.header-cta{margin-left:auto}
+
+/* Buttons */
+.btn{display:inline-block;padding:10px 16px;border-radius:12px;background:var(--brand);color:#fff;font-weight:600;line-height:1}
+.btn:hover,.btn:focus{background:#2b5248}
+
+/* Mobile toggle */
+.nav-toggle{display:none;width:40px;height:40px;border:0;border-radius:12px;background:var(--what);cursor:pointer}
+.nav-toggle-bar,
+.nav-toggle-bar::before,
+.nav-toggle-bar::after{display:block;position:relative;background:var(--fg);height:2px;width:20px;margin:0 auto;transition:transform .2s ease}
+.nav-toggle-bar::before,.nav-toggle-bar::after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--fg)}
+.nav-toggle-bar::before{top:-6px}
+.nav-toggle-bar::after{top:6px}
+
+/* Hero */
+.hero{
+  position:relative;min-height:100vh;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  color:#0d1b1e;background:url("Pictures/background-picture.png") center/cover no-repeat;overflow:hidden
+}
+.hero::before{content:"";position:absolute;inset:0;background:inherit;filter:blur(2px);transform:scale(1.1);z-index:0}
+.hero-inner{position:relative;z-index:1;max-width:1200px;padding:40px}
+.hero h2{font-size:clamp(28px,4.5vw,44px);color:#fff;margin:0 0 12px}
+.hero-sub{color:#dadfdc;font-size:clamp(16px,2.5vw,18px);margin:0 0 20px}
+.cta{display:inline-block;padding:12px 16px;border-radius:14px;background:var(--brand);color:#fff;font-weight:600}
+
+/* Sections */
+.section{min-height:100vh;display:flex;align-items:center}
+.section-what{background:var(--what)}
+.section-content{background:var(--content)}
+.section-testimonials{background:var(--testi)}
+.section-inner{max-width:1000px;margin:0 auto;padding:32px;text-align:left}
+@media (min-width:1280px){.section-inner{max-width:1100px}}
+
+/* Two-column (What) */
+.two-col{display:flex;align-items:center;gap:40px}
+.two-col .text-box{flex:1}
+.two-col .text-box h2{margin:0 0 24px}
+.two-col .text-box p{margin-top:0}
+.two-col .video-box{flex:1.3}
+.two-col .video-box video,
+.two-col .video-box img{display:block;max-width:100%;width:100%;height:auto;border-radius:12px}
+
+/* Zigzag (Content) with numbered backgrounds behind descriptions */
+.zigzag{display:grid;gap:36px}
+.zigzag .item{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.zigzag .item:nth-child(even){flex-direction:row-reverse}
+
+.zigzag .media{flex:1 1 46%}
+.zigzag .desc{
+  flex:1 1 48%;
+  text-align:left;
+  position:relative;
+  padding:24px;
+  border-radius:14px;
+  background:#ffffffcc; /* subtle card to help the number sit behind */
+  overflow:hidden;
+  isolation:isolate;    /* ensure stacking context for ::before */
+}
+.zigzag .desc > *{position:relative;z-index:1}
+
+.zigzag .desc::before{
+  content:"";
+  position:absolute;
+  top:-18px; left:-12px;
+  font-size:clamp(90px,18vw,220px);
+  font-weight:800;
+  line-height:1;
+  color:rgba(13,27,30,0.06); /* very light */
+  z-index:0;
+  pointer-events:none;
+}
+
+/* assign numbers 1..4 */
+.zigzag .item:nth-child(1) .desc::before{ content:"1"; }
+.zigzag .item:nth-child(2) .desc::before{ content:"2"; }
+.zigzag .item:nth-child(3) .desc::before{ content:"3"; }
+.zigzag .item:nth-child(4) .desc::before{ content:"4"; }
+
+/* images stay intact */
+.zigzag .media img{
+  display:block;width:100%;max-width:100%;height:auto;
+  border-radius:14px;box-shadow:0 10px 24px rgba(0,0,0,.06);object-fit:contain
+}
+
+#content h2{font-size:clamp(24px,3.5vw,34px)}
+#content h3{font-size:clamp(18px,2vw,20px);margin:0 0 10px}
+#content p{color:var(--muted)}
+
+/* CTAs */
+.section-cta{margin-top:24px}
+
+/* Testimonials */
+.testi-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+blockquote{margin:0;padding:18px;border-radius:14px;background:#fff;border:1px solid #e8ecea}
+blockquote p{margin:0 0 10px}
+blockquote footer{color:var(--muted)}
+
+/* Footer */
+.site-footer{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;margin-top:16px;font-size:14px;color:var(--muted)}
+.back-to-top{color:var(--fg)}
+
+/* Responsive */
+.nav-cta-mobile{display:none}
+@media (max-width:860px){
+  .nav-toggle{display:block;margin-left:auto}
+  .header-cta{display:none}
+  .nav-cta-mobile{display:block}
+  .site-nav{position:absolute;right:18px;top:64px;background:#fff;border:1px solid #e8ecea;border-radius:14px;padding:8px;display:none;box-shadow:0 10px 24px rgba(0,0,0,.08)}
+  .site-nav.open{display:block}
+  .site-nav ul{flex-direction:column}
+  .site-nav a{display:block}
+
+  .two-col{flex-direction:column}
+  .two-col .video-box{order:2}
+
+  .zigzag .item,
+  .zigzag .item:nth-child(even){flex-direction:column}
+  .section-inner{max-width:720px;padding:24px}
+}

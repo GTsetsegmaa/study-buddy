@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Study Buddy — Content</title>
+  <link href="https://fonts.cdnfonts.com/css/mona-sans" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="page-frame">
+    <header class="site-header" id="top">
+      <a class="brand brand-link" href="index.html">
+        <span class="logo" aria-hidden="true">
+          <img src="/Users/macdev/repos/study-buddy/Pictures/logo.png" alt="Study Buddy Logo">
+        </span>
+        <h1 class="title">Study Buddy</h1>
+      </a>
+
+      <nav id="site-nav" class="site-nav">
+        <ul>
+          <li><a href="what.html">What is Study Buddy</a></li>
+          <li><a href="content.html">Content</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li class="nav-cta-mobile"><a class="btn btn-download" href="download/study-buddy.zip" download>Download Now</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn-download header-cta" href="download/study-buddy.zip" download>Download Now</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </header>
+
+    <main id="main">
+      <section id="content" class="section section-content" aria-labelledby="content-title">
+        <div class="section-inner">
+          <h2 id="content-title">Content</h2>
+
+          <div class="zigzag">
+            <!-- 1: image left, desc right with big "1" behind -->
+            <article class="item">
+              <div class="media">
+                <img src="Pictures/login.png" alt="Login screen" />
+              </div>
+              <div class="desc">
+                <h3>Quick Login</h3>
+                <p>Fast, friendly sign-in that matches the site’s soft green palette.</p>
+              </div>
+            </article>
+
+            <!-- 2: image right, desc left with big "2" behind -->
+            <article class="item">
+              <div class="media">
+                <img src="Pictures/choose-room.png" alt="Choose your room" />
+              </div>
+              <div class="desc">
+                <h3>Choose Your Room</h3>
+                <p>Join a global room or start a personal focus space that fits your pace.</p>
+              </div>
+            </article>
+
+            <!-- 3: image left, desc right with big "3" behind -->
+            <article class="item">
+              <div class="media">
+                <img src="Pictures/chat.png" alt="Know your buddy chat" />
+              </div>
+              <div class="desc">
+                <h3>Know Your Buddy</h3>
+                <p>Break the ice with simple prompts and confirm study matches quickly.</p>
+              </div>
+            </article>
+
+            <!-- 4: image right, desc left with big "4" behind -->
+            <article class="item">
+              <div class="media">
+                <img src="Pictures/collaboration.png" alt="Collaboration split view" />
+              </div>
+              <div class="desc">
+                <h3>Collaborate Live</h3>
+                <p>Co-work with notes and tasks while staying accountable together.</p>
+              </div>
+            </article>
+          </div>
+
+          <a class="btn section-cta" href="testimonials.html">Get Started</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Study Buddy</p>
+      <a href="#top" class="back-to-top">Back to top</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
